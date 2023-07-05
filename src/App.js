@@ -1,7 +1,12 @@
+import React from "react";
+import Planets from "./components/planets";
+
 function App() {
   return (
     <div className="App">
-      <h1>React Practices</h1>
+      <>
+      <Planets />
+      </>
     </div>
   );
 }
