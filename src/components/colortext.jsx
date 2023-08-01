@@ -5,7 +5,7 @@ const Colortext = () => {
     const[textcolor, setTextcolor] = useState("black");
 
     const handleClick = ()=>{
-        setTextcolor("green")
+        setTextcolor(textcolor === "black"? "green" : "black")
     }
 
   return (
