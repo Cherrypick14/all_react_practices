@@ -2,6 +2,7 @@ import React from "react";
 import Planets from "./components/planets";
 import Counter from "./components/counter";
 import Textchanger from "./components/textchanger";
+import Colortext from "./components/colortext";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Planets />
       <Counter />
       <Textchanger />
+      <Colortext />
       </>
     </div>
   );
