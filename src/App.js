@@ -3,6 +3,7 @@ import Planets from "./components/planets";
 import Counter from "./components/counter";
 import Textchanger from "./components/textchanger";
 import Colortext from "./components/colortext";
+import Newcounter from "./components/newcounter";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Counter />
       <Textchanger />
       <Colortext />
+      <Newcounter />
       </>
     </div>
   );
