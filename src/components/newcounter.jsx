@@ -15,7 +15,7 @@ const handleDecrement = () =>{
         }
 const handleSet = ()=>{
 
-        setCount("")
+        setCount(0)
             
         }
 
