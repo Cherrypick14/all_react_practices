@@ -4,6 +4,7 @@ import Counter from "./components/counter";
 import Textchanger from "./components/textchanger";
 import Colortext from "./components/colortext";
 import Newcounter from "./components/newcounter";
+import Rtxe from "./components/rtxe";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Textchanger />
       <Colortext />
       <Newcounter />
+      <Rtxe />
       </>
     </div>
   );
