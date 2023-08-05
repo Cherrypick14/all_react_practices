@@ -1,6 +1,10 @@
-import React from 'react'
+import React,{useState} from 'react'
 
 const Todolist = () => {
+  
+  const[todoList, setTodoList] = useState([]);
+  const[newTodo, setNewTodo]= useState("");
+
   return (
     <div className='todo'>
          <input />
