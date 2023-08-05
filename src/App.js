@@ -5,11 +5,13 @@ import Textchanger from "./components/textchanger";
 import Colortext from "./components/colortext";
 import Newcounter from "./components/newcounter";
 import Rtxe from "./components/rtxe";
+import Todolist from "./components/todolist";
 
 function App() {
   return (
     <div className="App">
       <>
+      <Todolist />
       <Planets />
       <Counter />
       <Textchanger />
