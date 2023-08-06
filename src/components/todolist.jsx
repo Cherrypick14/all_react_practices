@@ -19,7 +19,7 @@ const Todolist = () => {
         <button onClick={handleToDo}>Add Task</button>
       <div className='tasks'>
         {todoList.map((mytodo,key)=>{
-          return <p>{mytodo}</p>
+          return <h1>{mytodo}</h1>
         })}
         
         </div>
