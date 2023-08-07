@@ -28,10 +28,11 @@ const Todolist = () => {
     <div className='todo'>
          <input onChange={handleChange} value ={newTodo}/>
         <button onClick={handleToDo}>Add Task</button>
+
       <div className='tasks'>
         {todoList.map((mytodo,key)=>{
           return( 
-            <div>
+            <div key={key}>
             <h1>{mytodo}</h1>
             <button onClick={deleteTodo}>X</button>
            </div> 
