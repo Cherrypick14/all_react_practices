@@ -15,26 +15,28 @@ const Todolist = () => {
     setTodoList(newList)
  }
 
- const deleteTodo = (todo)=>{
-      const nnewTodo =  todoList.filter((mytodo)=>{
-            if(todo === mytodo){
+ const deleteTodo = (taskName) => {
+      const newTask =  todoList.filter((task)=>{
+            if( task  ===  taskName ){
               return false;
             }else{
               return true;
             }
           }) ;
+          setTodoList(newTask);
  }
+ 
   return (
     <div className='todo'>
          <input onChange={handleChange} value ={newTodo}/>
         <button onClick={handleToDo}>Add Task</button>
 
-      <div className='tasks'>
-        {todoList.map((mytodo,key)=>{
+      <div className='task'>
+        {todoList.map((task,key)=>{
           return( 
             <div key={key}>
-            <h1>{mytodo}</h1>
-            <button onClick={deleteTodo}>X</button>
+            <h1>{task}</h1>
+            <button onClick={()=> deleteTodo(task)}>X</button>
            </div> 
           )
         
