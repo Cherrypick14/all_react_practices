@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import Task from './task';
 
 const Todolist = () => {
 
@@ -38,10 +39,10 @@ const Todolist = () => {
       <div className='task'>
         {todoList.map((task,key)=>{
           return( 
-            <div key={key.id}>
-            <h1>{task.taskName}</h1>
-            <button onClick={()=> deleteTodo(task.id)}>X</button>
-           </div> 
+            <>
+              <Task taskName={task.taskName} id ={task.id}/>
+            </>
+          
           )
         
         })}
