@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Task = (taskName, id, deleteTodo) => {
+const Task = (taskName, id, deleteTodo,completeTask) => {
     return (
       <div className='task'>
             <h1>{taskName}</h1>
