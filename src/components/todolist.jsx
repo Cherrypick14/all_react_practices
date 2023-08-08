@@ -14,7 +14,8 @@ const Todolist = () => {
  const addTask = () =>{
    const task = {
     id : todoList.length === 0 ? 1 : todoList[todoList.length - 1 ].id + 1,
-    taskName: newTodo
+    taskName: newTodo,
+    completed: false
   };
     setTodoList([...todoList, task])
      
@@ -30,7 +31,18 @@ const Todolist = () => {
           ) ;
           setTodoList(newTask);
  }
-  
+
+  const completeTask = (id) => {
+     setTodoList(
+        todoList.map((task)=>{
+         if(task.id === id){
+            return [...task, completed : true]
+         }else{
+            return task
+         }
+        })
+     )
+  }
   return (
     <div className='todo'>
          <input onChange={handleChange} value ={newTodo}/>
@@ -40,7 +52,7 @@ const Todolist = () => {
         {todoList.map((task,key)=>{
           return( 
             <>
-              <Task taskName={task.taskName} id ={task.id} deleteTodo={deleteTodo} />
+              <Task taskName={task.taskName} id ={task.id} deleteTodo={deleteTodo} completeTask={completeTask} />
             </>
           
           )
