@@ -25,7 +25,7 @@ const Todolist = () => {
   setTodoList(newList)
 };
 
- const deleteTodo = (id) => {
+    const deleteTodo = (id) => {
       const newTask =  todoList.filter((task)=> task.id !== id    
           ) ;
           setTodoList(newTask);
@@ -40,7 +40,7 @@ const Todolist = () => {
         {todoList.map((task,key)=>{
           return( 
             <>
-              <Task taskName={task.taskName} id ={task.id}/>
+              <Task taskName={task.taskName} id ={task.id} deleteTodo={deleteTodo}/>
             </>
           
           )
