@@ -40,7 +40,7 @@ const Todolist = () => {
         {todoList.map((task,key)=>{
           return( 
             <>
-              <Task taskName={task.taskName} id ={task.id} deleteTodo={deleteTodo}/>
+              <Task taskName={task.taskName} id ={task.id} deleteTodo={deleteTodo} />
             </>
           
           )
