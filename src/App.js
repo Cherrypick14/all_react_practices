@@ -12,12 +12,12 @@ function App() {
     <div className="App">
       <>
       <Todolist />
-      <Planets />
+      {/* <Planets />
       <Counter />
       <Textchanger />
       <Colortext />
       <Newcounter />
-      <Rtxe />
+      <Rtxe /> */}
       </>
     </div>
   );
