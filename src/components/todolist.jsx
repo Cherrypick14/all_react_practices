@@ -8,6 +8,7 @@ const Todolist = () => {
 
   const handleChange = (event) =>{
     setNewTodo( event.target.value);
+    setNewTodo("");
     
   }
 
@@ -37,20 +38,20 @@ const Todolist = () => {
           setTodoList(newTask);
  }
 
-  // const completeTask = (id) => {
-  //    setTodoList(
-  //       todoList.map((task)=>{
-  //        if(task.id === id){
-  //           return [...task, completed : true]
-  //        }else{
-  //           return task
-  //        }
-  //       })
-  //    )
-  // }
+  const completeTask = (id) => {
+     setTodoList(
+        todoList.map((task)=>{
+         if(task.id === id){
+            return {...task, completed : true}
+         }else{
+            return task
+         }
+        })
+     )
+  }
   return (
     <div className='todo'>
-         <input onChange={handleChange} />
+         <input onChange={handleChange} value={newTodo} />
         <button onClick={handleToDo}>Add Task</button>
 
       <div className='task'>
@@ -60,7 +61,8 @@ const Todolist = () => {
               <Task 
               taskName={task.taskName} 
               id ={task.id} 
-              deleteTodo={deleteTodo}  />
+              deleteTodo={deleteTodo} 
+              completeTask={completeTask} />
             
           
           )
