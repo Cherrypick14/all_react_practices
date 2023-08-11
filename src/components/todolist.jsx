@@ -8,7 +8,7 @@ const Todolist = () => {
 
   const handleChange = (event) =>{
     setNewTodo( event.target.value);
-    setNewTodo("");
+    // setNewTodo("");
     
   }
 
@@ -30,6 +30,7 @@ const Todolist = () => {
  const handleToDo = () =>{
   const newList = [...todoList, newTodo]
   setTodoList(newList)
+  setNewTodo("");
 };
 
     const deleteTodo = (id) => {
