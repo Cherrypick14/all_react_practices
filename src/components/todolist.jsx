@@ -8,7 +8,7 @@ const Todolist = () => {
 
   const handleChange = (event) =>{
     setNewTodo( event.target.value);
-    // setNewTodo("");
+  
     
   }
 
