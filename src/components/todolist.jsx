@@ -61,6 +61,7 @@ const Todolist = () => {
               <Task 
               taskName={task.taskName} 
               id ={task.id} 
+              completed = {task.completed}
               deleteTodo={deleteTodo} 
               completeTask={completeTask} />
             
