@@ -58,7 +58,6 @@ const Todolist = () => {
       <div className='task'>
         {todoList.map((task,key)=>{
           return( 
-            
               <Task 
               taskName={task.taskName} 
               id ={task.id} 
@@ -66,7 +65,6 @@ const Todolist = () => {
               deleteTodo={deleteTodo} 
               completeTask={completeTask} />
             
-          
           )
         
         })}
