@@ -4,7 +4,9 @@ const Task = ({taskName, id, deleteTodo,completeTask}) => {
     return (
       <div className='task'>
             <h1>{taskName}</h1>
+            <button>{completeTask}</button>
             <button onClick={()=> deleteTodo(id)}>X</button>
+            
      </div> 
       
     )
