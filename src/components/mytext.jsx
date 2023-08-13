@@ -13,7 +13,7 @@ const Mytext = () => {
     console.log("we can try again next time");
 
    };
-    },[text]);
+    },[]);
 
     const handleChange = (event )=>{
         setText(event.target.value)
