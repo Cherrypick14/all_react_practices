@@ -5,8 +5,15 @@ const Mytext = () => {
     const[text, setText]= useState("")
 
     useEffect(()=>{
-   console.log("We gotta do this mahn")
-    });
+
+   console.log("We gotta do this mahn");
+
+   return () => {
+
+    console.log("we can try again next time");
+
+   };
+    },[text]);
 
     const handleChange = (event )=>{
         setText(event.target.value)
