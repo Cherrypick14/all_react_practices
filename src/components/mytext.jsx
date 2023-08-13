@@ -1,8 +1,12 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 
 const Mytext = () => {
 
     const[text, setText]= useState("")
+
+    useEffect(()=>{
+   console.log("We gotta do this mahn")
+    });
 
     const handleChange = (event )=>{
         setText(event.target.value)
