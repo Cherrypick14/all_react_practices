@@ -9,7 +9,7 @@ const Mytext = () => {
     }
   return (
     <div className='text'>
-         <input type="text" onChange={handleChange} />
+         <input type="text" style={{textAlign: 'center'}} onChange={handleChange} />
       
         <h1>{text}</h1>
     </div>
