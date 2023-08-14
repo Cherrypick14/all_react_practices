@@ -7,6 +7,7 @@ import Newcounter from "./components/newcounter";
 import Rtxe from "./components/rtxe";
 import Todolist from "./components/todolist";
 import Mytext from "./components/mytext";
+import Catfacts from "./components/catfacts";
 
 function App() {
 
@@ -15,9 +16,10 @@ function App() {
   return (
     <div className="App">
       <>
-      <button onClick={()=> setShowText(!showText)}>Show Text</button>
+      <Catfacts />
+      {/* <button onClick={()=> setShowText(!showText)}>Show Text</button>
 
-     {showText && <Mytext /> } 
+     {showText && <Mytext /> }  */}
       {/* <Todolist /> */}
       {/* <Planets />
       <Counter />
