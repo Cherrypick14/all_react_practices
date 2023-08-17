@@ -3,21 +3,23 @@ import Axios from 'axios'
 
 const Myage = () => {
 
-  const[name, setName] = useState("")
+  const[name, setName] = useState("");
+  const[age, setPredictedAge] = useState(0);
 
   const fetchData = () =>{
     Axios.get(`https://api.agify.io/?name=${name}`).then((res)=>{
-      console.log(res.data)
-  })
+      setPredictedAge(res.data.age);
+    
+  });
   }
  
   return (
     <div className='Age'>
-      <input placeholder='Exmp .. Cheryl'
+      <input placeholder='Exmp .. Colucci'
              onChange={(event)=> setName(event.target.value)}/>
 
         <button onClick={fetchData}>Predict Age</button>
-        <h1>The predicted age is: </h1>
+        <h1>The predicted age is:{age} </h1>
         
     </div>
   )
