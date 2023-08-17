@@ -4,11 +4,11 @@ import Axios from 'axios'
 const Myage = () => {
 
   const[name, setName] = useState("");
-  const[age, setPredictedAge] = useState(0);
+  const[data, setData] = useState(null);
 
   const fetchData = () =>{
     Axios.get(`https://api.agify.io/?name=${name}`).then((res)=>{
-      setPredictedAge(res.data.age);
+      setData(res.data);
     
   });
   }
@@ -19,7 +19,10 @@ const Myage = () => {
              onChange={(event)=> setName(event.target.value)}/>
 
         <button onClick={fetchData}>Predict Age</button>
-        <h1>The predicted age is:{age} </h1>
+
+        <h1> Name is:{data?.name} </h1>
+        <h1> Age is:{data?.age} </h1>
+        <h1> Count is:{data?.count} </h1>
         
     </div>
   )
