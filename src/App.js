@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="App">
       <>
-      {/* <Catfacts /> */}
+      <Catfacts />
       <Excuses />
       {/* <Myage /> */}
       {/* <button onClick={()=> setShowText(!showText)}>Show Text</button>
