@@ -9,6 +9,7 @@ import Todolist from "./components/todolist";
 import Mytext from "./components/mytext";
 import Catfacts from "./components/catfacts";
 import Myage from "./components/myage";
+import Excuses from "./components/excuses";
 
 function App() {
 
@@ -18,7 +19,8 @@ function App() {
     <div className="App">
       <>
       {/* <Catfacts /> */}
-      <Myage />
+      <Excuses />
+      {/* <Myage /> */}
       {/* <button onClick={()=> setShowText(!showText)}>Show Text</button>
 
      {showText && <Mytext /> }  */}
