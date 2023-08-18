@@ -1,4 +1,5 @@
 import React,{useState} from "react";
+import {BrowserRouter as Router,Routes, Route} from 'react-router-dom'
 import Planets from "./components/planets";
 import Counter from "./components/counter";
 import Textchanger from "./components/textchanger";
@@ -10,6 +11,7 @@ import Mytext from "./components/mytext";
 import Catfacts from "./components/catfacts";
 import Myage from "./components/myage";
 import Excuses from "./components/excuses";
+import { Home } from "./pages/Home";
 
 function App() {
 
@@ -17,9 +19,12 @@ function App() {
 
   return (
     <div className="App">
-      <>
-      <Catfacts />
-      <Excuses />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home/>} />
+        </Routes>
+      {/* <Catfacts /> */}
+      {/* <Excuses /> */}
       {/* <Myage /> */}
       {/* <button onClick={()=> setShowText(!showText)}>Show Text</button>
 
@@ -31,7 +36,7 @@ function App() {
       <Colortext />
       <Newcounter />
       <Rtxe /> */}
-      </>
+      </Router>
     </div>
   );
 }
