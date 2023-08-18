@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Routes} from 'react-router-dom';
 import { Home } from "./pages/Home";
 import { Categories } from "./pages/Categories";
 import { Contacts } from "./pages/Contacts";
+import { Navbar } from "./components/navbar";
 
 function App() {
 
@@ -11,6 +12,8 @@ function App() {
   return (
     <div className="App">
       <Router>
+       <Navbar />
+        
         <Routes>
           <Route path="/" element={<Home  />} />
           <Route path="/categories" element={<Categories />} />
