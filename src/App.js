@@ -1,17 +1,8 @@
-import React,{useState} from "react";
-import {BrowserRouter as Router,Routes, Route} from 'react-router-dom'
-import Planets from "./components/planets";
-import Counter from "./components/counter";
-import Textchanger from "./components/textchanger";
-import Colortext from "./components/colortext";
-import Newcounter from "./components/newcounter";
-import Rtxe from "./components/rtxe";
-import Todolist from "./components/todolist";
-import Mytext from "./components/mytext";
-import Catfacts from "./components/catfacts";
-import Myage from "./components/myage";
-import Excuses from "./components/excuses";
+import React, { useState } from "react";
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import { Home } from "./pages/Home";
+import { Categories } from "./pages/Categories";
+import { Contacts } from "./pages/Contacts";
 
 function App() {
 
@@ -21,7 +12,9 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/" element={<Home/>} />
+          <Route path="/" element={<Home  />} />
+          <Route path="/categories" element={<Categories />} />
+          <Route path="/contacts" element={<Contacts />} />
         </Routes>
       {/* <Catfacts /> */}
       {/* <Excuses /> */}
