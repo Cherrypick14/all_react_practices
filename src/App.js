@@ -4,6 +4,7 @@ import { Home } from "./pages/Home";
 import { Categories } from "./pages/Categories";
 import { Contacts } from "./pages/Contacts";
 import { Navbar } from "./components/navbar";
+import {Products} from "./pages/allproducts"
 
 function App() {
 
