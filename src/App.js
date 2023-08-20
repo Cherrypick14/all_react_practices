@@ -13,25 +13,25 @@ const ParentComponent = () =>{
 
   return (
     <>
-      <ChildComponent />
+      <ChildComponent state={state} />
     </>
  
   )
 } 
 
-const ChildComponent = ()=>{
+const ChildComponent = (state)=>{
   return(
     <>
-    <GrandChildComponent />
+    <GrandChildComponent state={state} />
     </>
   )
 }
 
-const GrandChildComponent = () =>{
+const GrandChildComponent = (state) =>{
   return(
-    <>
-    
-    </>
+    <div>
+     {state}
+    </div>
   )
 }
 
