@@ -6,21 +6,50 @@ import { Contacts } from "./pages/Contacts";
 import { Navbar } from "./components/navbar";
 import {Products} from "./pages/allproducts"
 
+
+
+const ParentComponent = () =>{
+  const[state, setState] = useState();
+
+  return (
+    <>
+      <ChildComponent />
+    </>
+ 
+  )
+} 
+
+const ChildComponent = ()=>{
+  return(
+    <>
+    <GrandChildComponent />
+    </>
+  )
+}
+
+const GrandChildComponent = () =>{
+  return(
+    <>
+    
+    </>
+  )
+}
+
 function App() {
 
-  const [showText, setShowText] = useState(false);
+  // const [showText, setShowText] = useState(false);
 
   return (
     <div className="App">
-      <Router>
-       <Navbar />
+      {/* <Router> */}
+       {/* <Navbar /> */}
         
-        <Routes>
+        {/* <Routes>
           <Route path="/" element={<Home  />} />
           <Route path="/categories" element={<Categories />} />
           <Route path="/contacts" element={<Contacts />} />
           <Route path="*" element={<h1>Page Not Found</h1>} />
-        </Routes>
+        </Routes> */}
       {/* <Catfacts /> */}
       {/* <Excuses /> */}
       {/* <Myage /> */}
@@ -34,7 +63,7 @@ function App() {
       <Colortext />
       <Newcounter />
       <Rtxe /> */}
-      </Router>
+      {/* </Router> */}
     </div>
   );
 }
