@@ -7,49 +7,22 @@ import { Navbar } from "./components/navbar";
 import {Products} from "./pages/allproducts"
 
 
-
-const ParentComponent = () =>{
-  const[state, setState] = useState();
-
-  return (
-    <>
-      <ChildComponent state={state} />
-    </>
- 
-  )
-} 
-
-const ChildComponent = (state)=>{
-  return(
-    <>
-    <GrandChildComponent state={state} />
-    </>
-  )
-}
-
-const GrandChildComponent = (state) =>{
-  return(
-    <div>
-     {state}
-    </div>
-  )
-}
-
 function App() {
 
   // const [showText, setShowText] = useState(false);
+  const [category, setCategory]= useState("Cookies");
 
   return (
     <div className="App">
-      {/* <Router> */}
-       {/* <Navbar /> */}
+      <Router>
+       <Navbar />
         
-        {/* <Routes>
-          <Route path="/" element={<Home  />} />
-          <Route path="/categories" element={<Categories />} />
+        <Routes>
+          <Route path="/" element={<Home category={category} />} />
+          <Route path="/categories" element={<Categories category={category} />} />
           <Route path="/contacts" element={<Contacts />} />
           <Route path="*" element={<h1>Page Not Found</h1>} />
-        </Routes> */}
+        </Routes>
       {/* <Catfacts /> */}
       {/* <Excuses /> */}
       {/* <Myage /> */}
@@ -63,7 +36,7 @@ function App() {
       <Colortext />
       <Newcounter />
       <Rtxe /> */}
-      {/* </Router> */}
+      </Router>
     </div>
   );
 }
