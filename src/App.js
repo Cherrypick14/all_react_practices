@@ -16,6 +16,7 @@ function App() {
 
   return (
     <div className="App">
+      <AppContext.Provider value={{category, setCategory}}>
       <Router>
        <Navbar />
         
@@ -39,6 +40,8 @@ function App() {
       <Newcounter />
       <Rtxe /> */}
       </Router>
+      </AppContext.Provider>
+      
     </div>
   );
 }
