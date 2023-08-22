@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Route, BrowserRouter as Router, Routes} from 'react-router-dom';
 import { Home } from "./pages/Home";
 import { Categories } from "./pages/Categories";
 import { Contacts } from "./pages/Contacts";
 import { Navbar } from "./components/navbar";
-import {Products} from "./pages/allproducts"
+// import {Products} from "./pages/allproducts"
 
 
 function App() {
