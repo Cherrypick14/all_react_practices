@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, createContext } from "react";
 import { Route, BrowserRouter as Router, Routes} from 'react-router-dom';
 import { Home } from "./pages/Home";
 import { Categories } from "./pages/Categories";
@@ -6,6 +6,8 @@ import { Contacts } from "./pages/Contacts";
 import { Navbar } from "./components/navbar";
 // import {Products} from "./pages/allproducts"
 
+
+export const AppContext = createContext();
 
 function App() {
 
