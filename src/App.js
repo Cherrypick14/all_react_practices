@@ -4,19 +4,22 @@ import { Home } from "./pages/Home";
 import { Categories } from "./pages/Categories";
 import { Contacts } from "./pages/Contacts";
 import { Navbar } from "./components/navbar";
+import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
 // import {Products} from "./pages/allproducts"
 
 
-export const AppContext = createContext();
+// export const AppContext = createContext();
 
 function App() {
 
   // const [showText, setShowText] = useState(false);
   const [category, setCategory]= useState("Cookies");
 
+  const client = new QueryClient();
+
   return (
     <div className="App">
-      <AppContext.Provider value={{category, setCategory}}>
+      <QueryClientProvider client={client}>
       <Router>
        <Navbar />
         
@@ -40,7 +43,7 @@ function App() {
       <Newcounter />
       <Rtxe /> */}
       </Router>
-      </AppContext.Provider>
+      </QueryClientProvider>
       
     </div>
   );
