@@ -3,7 +3,7 @@ import  Axios  from "axios";
 
 export const Contacts = () =>{
 
-  const {data,isLoading,isError} = useQuery(["cat"],()=>{
+  const {data,isLoading,isError,refetch} = useQuery(["cat"],()=>{
 
    return Axios.get("https://catfact.ninja/fact").then((res)=> res.data);
 
@@ -23,7 +23,8 @@ export const Contacts = () =>{
   };
     return (
         <div className="Contacts">
-          <h1>{data?.fact}</h1> 
+          <h1>{data?.fact}</h1>
+          <button onClick={refetch}>Update Me</button> 
         </div>
     )
 };
