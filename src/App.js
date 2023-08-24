@@ -15,7 +15,13 @@ function App() {
   // const [showText, setShowText] = useState(false);
   const [category, setCategory]= useState("Cookies");
 
-  const client = new QueryClient();
+  const client = new QueryClient({
+    defaultOptions:{
+      queries :{
+         refetchOnWindowFocus: false,
+      }
+    }
+  });
 
   return (
     <div className="App">
