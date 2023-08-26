@@ -4,6 +4,7 @@ import { Home } from "./pages/Home";
 import { Categories } from "./pages/Categories";
 import { Contacts } from "./pages/Contacts";
 import { Navbar } from "./components/navbar";
+import { Form } from "./pages/Form";
 import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
 // import {Products} from "./pages/allproducts"
 
@@ -35,6 +36,7 @@ function App() {
           <Route path="/categories" element={<Categories category={category} />} />
           <Route path="/contacts" element={<Contacts />} />
           <Route path="*" element={<h1>Page Not Found</h1>} />
+          <Route path="/form" element={<Form />}/>
         </Routes>
       {/* <Catfacts /> */}
       {/* <Excuses /> */}
