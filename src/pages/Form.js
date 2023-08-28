@@ -4,6 +4,13 @@ import * as yup from 'yup';
 export const Form = ()=>{
     const {register, handleSubmit} = useForm();
 
+    const schema = yup.object().shape({
+        fullName: yup.string().required(),
+        email:yup.string().required(),
+        age: yup.number(),
+        password:yup.string().required()
+    })
+
     const onSubmit = (data) =>{
         console.log(data);
     }
