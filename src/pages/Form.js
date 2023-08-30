@@ -22,18 +22,22 @@ export const Form = ()=>{
     return(
         <form onSubmit={handleSubmit(onSubmit)}>
             <input type="text" placeholder="Enter your Full Name..." {...register("fullName")} />
-            <p>{errors.fullName.message}</p>
+            <p>{errors.fullName?.message}</p>
             <input type="text" placeholder=" Enter your Email ..." {...register("email")}/>
+            <p>{errors.email?.message}</p>
             <input type="number" placeholder=" Age ..."{...register("age")}/>
+            <p>{errors.age?.message}</p>
             <input 
             type="password"
             placeholder="Password..." 
             {...register("password")}/>
+            <p>{errors.password?.message}</p>
             <input 
             type="password"
             placeholder="Confirm password..."
             {...register("confirmPassword")}/>
             <input type="submit" />
+            <p>{errors.confirmPassword?.message}</p>
         </form>
     )
 }
