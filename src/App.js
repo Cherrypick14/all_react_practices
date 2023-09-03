@@ -7,6 +7,7 @@ import { Navbar } from "./components/navbar";
 import { Form } from "./pages/Form";
 import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
 import {MainToggle} from "./maintoggle"
+import { Newcounter } from "./maincounter";
 // import {Products} from "./pages/allproducts"
 
 
@@ -39,7 +40,8 @@ function App() {
           <Route path="*" element={<h1>Page Not Found</h1>} />
           <Route path="/form" element={<Form />}/>
         </Routes>
-      <MainToggle />     
+      <MainToggle />  
+      <Newcounter />   
       {/* <Catfacts /> */}
       {/* <Excuses /> */}
       {/* <Myage /> */}
