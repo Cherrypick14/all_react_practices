@@ -17,4 +17,6 @@ export const useCount = (initialVal = 0 )=>{
     setCount(0);
    }
 
+   return {count, increase, decrease, restart} ; 
+
 };
