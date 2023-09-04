@@ -8,6 +8,7 @@ import { Form } from "./pages/Form";
 import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
 import {MainToggle} from "./maintoggle"
 import { Newcounter } from "./maincounter";
+import { Person } from "./Person";
 // import {Products} from "./pages/allproducts"
 
 
@@ -41,7 +42,13 @@ function App() {
           <Route path="/form" element={<Form />}/>
         </Routes>
       <MainToggle />  
-      <Newcounter />   
+      <Newcounter /> 
+      <Person 
+      name="Colucci"
+      email ="shawncolucci@gmail.com"
+      age={23}
+      isStatus= {true}
+      allies= {["Dave","Timon","Jenny"]}/>
       {/* <Catfacts /> */}
       {/* <Excuses /> */}
       {/* <Myage /> */}
